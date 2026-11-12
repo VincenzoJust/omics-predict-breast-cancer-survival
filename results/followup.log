@@ -1,0 +1,21 @@
+       run   metric     lo     hi    est        ref endpoint  baseline
+coxnet|C+R C_uno_5y -0.001  0.061  0.032      cox|C       OS age+stage
+deepsurv|C C_uno_5y  0.024  0.067  0.045      cox|C       OS age+stage
+  mofa|C+R C_uno_5y  0.017  0.060  0.039      cox|C       OS age+stage
+coxnet|C+R C_uno_5y -0.045  0.018 -0.013 deepsurv|C       OS age+stage
+     cox|C C_uno_5y -0.067 -0.024 -0.045 deepsurv|C       OS age+stage
+  mofa|C+R C_uno_5y -0.033  0.022 -0.006 deepsurv|C       OS age+stage
+coxnet|C+R C_uno_5y -0.022  0.020 -0.001      cox|C       OS      rich
+deepsurv|C C_uno_5y -0.090 -0.042 -0.066      cox|C       OS      rich
+  mofa|C+R C_uno_5y -0.022  0.017 -0.002      cox|C       OS      rich
+coxnet|C+R C_uno_5y  0.032  0.096  0.065 deepsurv|C       OS      rich
+     cox|C C_uno_5y  0.042  0.090  0.066 deepsurv|C       OS      rich
+  mofa|C+R C_uno_5y  0.036  0.090  0.063 deepsurv|C       OS      rich
+deepsurv|C C_uno_5y -0.120 -0.008 -0.063      cox|C      DSS age+stage
+  mofa|C+R C_uno_5y  0.027  0.106  0.067      cox|C      DSS age+stage
+     cox|C C_uno_5y  0.008  0.120  0.063 deepsurv|C      DSS age+stage
+  mofa|C+R C_uno_5y  0.089  0.173  0.130 deepsurv|C      DSS age+stage
+deepsurv|C C_uno_5y -0.098 -0.037 -0.068      cox|C      DSS      rich
+  mofa|C+R C_uno_5y -0.032  0.012 -0.010      cox|C      DSS      rich
+     cox|C C_uno_5y  0.037  0.098  0.068 deepsurv|C      DSS      rich
+  mofa|C+R C_uno_5y  0.022  0.091  0.058 deepsurv|C      DSS      rich

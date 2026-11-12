@@ -1,0 +1,13 @@
+# Do tumour omics improve breast-cancer survival prediction beyond clinical variables?
+
+**Background.** Multi-omic survival models are often reported to beat clinical staging, usually with internal validation only. I tested whether tumour RNA-seq and DNA methylation add prognostic information to age and AJCC stage, with an external cohort.
+
+**Data.** For training, TCGA-BRCA: 1045 women with RNA-seq, of whom 759 also had 450k methylation. For external validation of the RNA models, METABRIC: 1454 women, Illumina microarray. Primary endpoint: 5-year overall survival (OS).
+
+**Methods.** The reference was a Cox model with age and stage. Comparators were elastic-net Cox (CoxNet), random survival forest, a DeepSurv-style network and Cox on MOFA+ factors. They used the clinical variables plus 2000 genes, with or without 5000 CpGs. Internal validation was 3 × 5-fold cross-validation. Externally, models were fitted on TCGA and applied unchanged to METABRIC, with 1000 paired bootstraps. Metrics were Uno's C-index, time-dependent AUC, Integrated Brier Score and calibration. A follow-up repeated the external comparison for disease-specific survival (DSS) and against a richer clinical Cox (adding ER, PR, HER2, node status and quadratic age).
+
+**Results.** Internally (94 deaths), no omic model reliably beat the clinical Cox (Uno C 0.706; per-fold differences for the best model ranged from -0.085 to +0.113), and methylation added nothing. In METABRIC, CoxNet and MOFA+ with RNA improved Uno C over the clinical Cox by +0.049 (95% CI +0.020 to +0.078) and +0.047 (+0.026 to +0.069). DeepSurv on age and stage alone improved it by +0.042, but this flexible-clinical explanation did not hold in the follow-up: DeepSurv lost to the linear Cox on DSS and with the richer baseline. In the follow-up (1398 METABRIC patients), the richer linear Cox reached C 0.693 for OS and 0.725 for DSS. Against it RNA added -0.001 to -0.010 (all CIs spanning 0). Against age and stage alone, RNA did improve DSS prediction (MOFA+ +0.067, +0.027 to +0.106). Omic models were over-dispersed (calibration slopes 0.41-0.68); all models under-predicted METABRIC risk.
+
+**Conclusion.** Transcriptomics improved external prediction over age and stage, but not over a linear Cox model that also included routine receptor and node status. Methylation added nothing internally. The follow-up and the DeepSurv comparison were designed after the first results.
+
+**Limitations.** Different platforms (RNA-seq vs microarray). Outcome-free feature filters on the whole training cohort. Methylation validated internally only, with few events. No tumour grade in TCGA. CoxNet did not converge for DSS. Little tuning.

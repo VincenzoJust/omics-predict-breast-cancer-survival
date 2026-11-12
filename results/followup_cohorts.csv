@@ -1,0 +1,3 @@
+cohort,n,OS_deaths,DSS_deaths,er,pr,her2,node
+TCGA-BRCA,940,105,67,0.767,0.666,0.157,0.513
+METABRIC,1398,790,469,0.771,0.526,0.122,0.464

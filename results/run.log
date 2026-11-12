@@ -1,0 +1,15 @@
+[Parallel(n_jobs=6)]: Using backend LokyBackend with 6 concurrent workers.
+[Parallel(n_jobs=6)]: Done   8 out of  15 | elapsed: 20.8min remaining: 18.2min
+[Parallel(n_jobs=6)]: Done  12 out of  15 | elapsed: 21.7min remaining:  5.4min
+[Parallel(n_jobs=6)]: Done  15 out of  15 | elapsed: 27.4min finished
+[Parallel(n_jobs=6)]: Using backend LokyBackend with 6 concurrent workers.
+[Parallel(n_jobs=6)]: Done   2 out of   5 | elapsed:  1.9min remaining:  2.8min
+[Parallel(n_jobs=6)]: Done   5 out of   5 | elapsed:  2.1min finished
+[external] cox|C: C_uno 0.623
+[external] rsf|C: C_uno 0.581
+[external] deepsurv|C: C_uno 0.664
+[external] coxnet|C+R: C_uno 0.671
+[external] rsf|C+R: C_uno 0.625
+[external] deepsurv|C+R: C_uno 0.611
+[external] mofa|C+R: C_uno 0.670
+done

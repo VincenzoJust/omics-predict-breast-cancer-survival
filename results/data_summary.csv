@@ -1,0 +1,4 @@
+cohort,n,deaths,deaths_within_5y,median_followup_censored_y,age_median,stage_I,stage_II,stage_III,stage_IV
+"TCGA-BRCA, RNA (external training set)",1045,139,94,2.14,58.0,181,603,242,19
+"TCGA-BRCA, RNA + methylation (internal CV cohort)",759,94,68,2.1,58.0,125,429,195,10
+METABRIC (external test set),1454,821,307,13.71,61.22,501,825,118,10
